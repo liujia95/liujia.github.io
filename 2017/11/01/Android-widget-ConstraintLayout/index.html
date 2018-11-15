@@ -94,21 +94,21 @@
 
 
 
-<meta name="description" content="目录：1、为什么要用ConstraintLayout？2、ConstraintLayout有哪些缺点？3、怎么使用ConstraintLayout。">
+<meta name="description" content="目录：1、为什么要用ConstraintLayout2、ConstraintLayout有哪些缺点3、怎么使用ConstraintLayout">
 <meta name="keywords" content="Android,控件">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Android | Android控件之ConstraintLayout">
+<meta property="og:title" content="Android | ConstraintLayout">
 <meta property="og:url" content="https://github.com/liujia95/liujia95.github.io/2017/11/01/Android-widget-ConstraintLayout/index.html">
-<meta property="og:site_name" content="一人静">
-<meta property="og:description" content="目录：1、为什么要用ConstraintLayout？2、ConstraintLayout有哪些缺点？3、怎么使用ConstraintLayout。">
+<meta property="og:site_name" content="LiuJia&#39;s Blog">
+<meta property="og:description" content="目录：1、为什么要用ConstraintLayout2、ConstraintLayout有哪些缺点3、怎么使用ConstraintLayout">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2237943-0a0a5e059b072d8b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2237943-f4a23b94597e6e58.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2237943-0a0a5e059b072d8b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2018-11-15T06:54:25.644Z">
+<meta property="og:updated_time" content="2018-11-15T08:32:20.826Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Android | Android控件之ConstraintLayout">
-<meta name="twitter:description" content="目录：1、为什么要用ConstraintLayout？2、ConstraintLayout有哪些缺点？3、怎么使用ConstraintLayout。">
+<meta name="twitter:title" content="Android | ConstraintLayout">
+<meta name="twitter:description" content="目录：1、为什么要用ConstraintLayout2、ConstraintLayout有哪些缺点3、怎么使用ConstraintLayout">
 <meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/2237943-0a0a5e059b072d8b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 
 
@@ -144,7 +144,7 @@
 
 
 
-  <title>Android | Android控件之ConstraintLayout | 一人静</title>
+  <title>Android | ConstraintLayout | LiuJia's Blog</title>
   
 
 
@@ -190,7 +190,7 @@
     <div class="custom-logo-site-title">
       <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">一人静</span>
+        <span class="site-title">LiuJia's Blog</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -264,6 +264,24 @@
 
 
 
+
+
+<script>
+
+    window.onload = function(){
+        var path = 'https://liujia95me.coding.me'; //这里要改成你博客的地址
+        var localhostItem = String(window.location).split(path)[1];
+        var LiNode = document.querySelectorAll('#menu > li > a')
+
+        for(var i = 0; i< LiNode.length;i++){
+            var item = String(LiNode[i].href).split(path)[1];
+            if(item == localhostItem && item != undefined){
+                LiNode[i].setAttribute('style','border-bottom:1px solid black');
+            }
+        }
+    };
+
+</script>
  </div>
     </header>
 
@@ -296,7 +314,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="一人静">
+      <meta itemprop="name" content="LiuJia's Blog">
     </span>
 
     
@@ -304,7 +322,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Android | Android控件之ConstraintLayout</h1>
+          <h1 class="post-title" itemprop="name headline">Android | ConstraintLayout</h1>
         
 
         <div class="post-meta">
@@ -344,6 +362,17 @@
 
           
           
+             <span id="/2017/11/01/Android-widget-ConstraintLayout/" class="leancloud_visitors" data-flag-title="Android | ConstraintLayout">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
 
           
             <span class="post-meta-divider">|</span>
@@ -369,28 +398,28 @@
       
 
       
-        <h3 id="目录："><a href="#目录：" class="headerlink" title="目录："></a>目录：</h3><p>1、为什么要用ConstraintLayout？<br>2、ConstraintLayout有哪些缺点？<br>3、怎么使用ConstraintLayout。  <a id="more"></a></p>
+        <h3 id="目录："><a href="#目录：" class="headerlink" title="目录："></a>目录：</h3><p>1、为什么要用ConstraintLayout<br>2、ConstraintLayout有哪些缺点<br>3、怎么使用ConstraintLayout<a id="more"></a>  </p>
 <hr>
-<h2 id="1、为什么要用ConstraintLayout？"><a href="#1、为什么要用ConstraintLayout？" class="headerlink" title="1、为什么要用ConstraintLayout？"></a>1、为什么要用ConstraintLayout？</h2><ul>
-<li>任何复杂的布局只需一层（除非有嵌套的事件响应需求）：<blockquote>
-<p>绘制过程中的每个阶段都需要对视图树执行一次自顶向下的遍历操作。因此，视图层次结构中嵌入（或嵌套）的视图越多，设备绘制视图所需的时间和计算功耗也就越多。通过在 Android 应用布局中保持扁平的层次结构，您可以为应用创建响应快速而灵敏的界面。</p>
+<h3 id="1、为什么要用ConstraintLayout？"><a href="#1、为什么要用ConstraintLayout？" class="headerlink" title="1、为什么要用ConstraintLayout？"></a>1、为什么要用ConstraintLayout？</h3><p>1、任何复杂的布局只需一层（除非有嵌套的事件响应需求）：</p>
+<blockquote>
+<p>绘制过程中的每个阶段都需要对视图树执行一次自顶向下的遍历操作。因此，视图层次结构中嵌入（或嵌套）的视图越多，设备绘制视图所需的时间和计算功耗也就越多。通过在 Android 应用布局中保持扁平的层次结构，您可以为应用创建响应快速而灵敏的界面。  </p>
 </blockquote>
-</li>
-<li>性能更出色<blockquote>
+<p>2、性能更出色  </p>
+<blockquote>
 <p>ConstraintLayout 在测量/布局阶段的性能比 RelativeLayout大约高 40%。<br>详情参阅：<a href="https://mp.weixin.qq.com/s/gGR2itbY7hh9fo61SxaMQQ" target="_blank" rel="noopener">解析ConstraintLayout的性能优势</a></p>
 </blockquote>
-</li>
-<li>LinearLayout和RecyclerView的布局能做到的ConstraintLayout都能做到，它们做不到的也能做到（这一点后面详解）。</li>
+<p>3、LinearLayout和RecyclerView的布局能做到的ConstraintLayout都能做到，它们做不到的也能做到（这一点后面详解）。</p>
+<h3 id="2、它有哪些缺点？"><a href="#2、它有哪些缺点？" class="headerlink" title="2、它有哪些缺点？"></a>2、它有哪些缺点？</h3><p>1、xml很啰嗦</p>
+<blockquote>
+<p>主要体现在两方面：</p>
+<ul>
+<li>它需要通过详尽的属性来确定自身位置，因为以前用LL或RL的写法，有些属性在父容器写一次就够，子容器就无需再写一次，但这个是每个容器都是独立的，需要根据周围的控件确定自身的位置。所以这就引出了第二个啰嗦。</li>
+<li>每个View都要有与之对应的id。</li>
 </ul>
-<h2 id="2、它有哪些缺点？"><a href="#2、它有哪些缺点？" class="headerlink" title="2、它有哪些缺点？"></a>2、它有哪些缺点？</h2><ul>
-<li>xml很啰嗦<blockquote>
-<p>主要体现在两方面：<br>1、它需要通过详尽的属性来确定自身位置，因为以前用LL或RL的写法，有些属性在父容器写一次就够，子容器就无需再写一次，但这个是每个容器都是独立的，需要根据周围的控件确定自身的位置。所以这就引出了第二个啰嗦。<br>2、每个View都要有与之对应的id。</p>
 </blockquote>
-</li>
-<li>没有gravity属性，这里后面会讲到一个“拉力”的概念，这里先简单说一下，怎么实现gravity=center这样的效果呢？需要把每个边都与父容器的边对应上（需设置4个属性），因为四个边都要拉扯以将控件拉到中间。</li>
-</ul>
-<h2 id="3、怎么使用？"><a href="#3、怎么使用？" class="headerlink" title="3、怎么使用？"></a>3、怎么使用？</h2><h3 id="1、引入资源"><a href="#1、引入资源" class="headerlink" title="1、引入资源"></a>1、引入资源</h3><figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">compile</span> <span class="string">'com.android.support.constraint:constraint-layout:1.0.2'</span></span><br></pre></td></tr></table></figure>
-<h3 id="2、熟悉它的属性，主要有几部分："><a href="#2、熟悉它的属性，主要有几部分：" class="headerlink" title="2、熟悉它的属性，主要有几部分："></a>2、熟悉它的属性，主要有几部分：</h3><h4 id="part1-类似于RelativeLayout的部分："><a href="#part1-类似于RelativeLayout的部分：" class="headerlink" title="part1:类似于RelativeLayout的部分："></a>part1:类似于RelativeLayout的部分：</h4><p>根据其他控件给自身定位：</p>
+<p>2、没有gravity属性，这里后面会讲到一个“拉力”的概念，这里先简单说一下，怎么实现gravity=center这样的效果呢？需要把每个边都与父容器的边对应上（需设置4个属性），因为四个边都要拉扯以将控件拉到中间。</p>
+<h3 id="3、怎么使用？"><a href="#3、怎么使用？" class="headerlink" title="3、怎么使用？"></a>3、怎么使用？</h3><h4 id="1、引入资源"><a href="#1、引入资源" class="headerlink" title="1、引入资源"></a>1、引入资源</h4><figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">compile</span> <span class="string">'com.android.support.constraint:constraint-layout:1.0.2'</span></span><br></pre></td></tr></table></figure>
+<h4 id="2、熟悉它的属性，主要有几部分："><a href="#2、熟悉它的属性，主要有几部分：" class="headerlink" title="2、熟悉它的属性，主要有几部分："></a>2、熟悉它的属性，主要有几部分：</h4><h5 id="part1-类似于RelativeLayout的部分："><a href="#part1-类似于RelativeLayout的部分：" class="headerlink" title="part1:类似于RelativeLayout的部分："></a>part1:类似于RelativeLayout的部分：</h5><p>根据其他控件给自身定位：</p>
 <blockquote>
 <p>layout_toRightOf=”A”——&gt;layout_constraintLeft_toRightOf=”A”<br>根据父容器给自身定位：<br>layout_alignParentRight=true——&gt;layout_constraintRight_toRightOf=parent</p>
 </blockquote>
@@ -398,9 +427,9 @@
 <blockquote>
 <p>layout_constraintRight_toLeftOf<br>layout_constraintRight_toRightOf<br>layout_constraintTop_toTopOf<br>layout_constraintTop_toBottomOf<br>layout_constraintBottom_toTopOf<br>layout_constraintBottom_toBottomOf<br>//根据某控件的基线对齐<br>layout_constraintBaseline_toBaselineOf</p>
 </blockquote>
-<h4 id="part2：类似LinearLayout的weight效果"><a href="#part2：类似LinearLayout的weight效果" class="headerlink" title="part2：类似LinearLayout的weight效果"></a>part2：类似LinearLayout的weight效果</h4><p>官方有张图，如[图1]所示，通常来说，LinearLayout的weight只能实现第四行的效果，但ConstraintLayout可以实现下图全部。<br><img src="http://upload-images.jianshu.io/upload_images/2237943-0a0a5e059b072d8b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图1"><br>想实现类似LL（LinearLayout）的weight的效果，重点看每个TextView的最下三行以及每个TextView的<strong>layout_width都是0</strong>，以下布局可以实现三个TextView。<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">TextView</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:id</span>=<span class="string">"@+id/tab1"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:layout_width</span>=<span class="string">"0dp"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:layout_height</span>=<span class="string">"30dp"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">app:layout_constraintBottom_toBottomOf</span>=<span class="string">"parent"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">app:layout_constraintLeft_toLeftOf</span>=<span class="string">"parent"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">app:layout_constraintRight_toLeftOf</span>=<span class="string">"@+id/tab2"</span> /&gt;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">TextView</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:id</span>=<span class="string">"@+id/tab2"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:layout_width</span>=<span class="string">"0dp"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:layout_height</span>=<span class="string">"30dp"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">app:layout_constraintBottom_toBottomOf</span>=<span class="string">"parent"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">app:layout_constraintLeft_toRightOf</span>=<span class="string">"@id/tab1"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">app:layout_constraintRight_toLeftOf</span>=<span class="string">"@+id/tab3"</span> /&gt;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">TextView</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:id</span>=<span class="string">"@+id/tab3"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:layout_width</span>=<span class="string">"0dp"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:layout_height</span>=<span class="string">"30dp"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">app:layout_constraintBottom_toBottomOf</span>=<span class="string">"parent"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">app:layout_constraintLeft_toRightOf</span>=<span class="string">"@id/tab2"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">app:layout_constraintRight_toRightOf</span>=<span class="string">"parent"</span> /&gt;</span></span><br></pre></td></tr></table></figure></p>
+<h5 id="part2：类似LinearLayout的weight效果"><a href="#part2：类似LinearLayout的weight效果" class="headerlink" title="part2：类似LinearLayout的weight效果"></a>part2：类似LinearLayout的weight效果</h5><p>官方有张图，如[图1]所示，通常来说，LinearLayout的weight只能实现第四行的效果，但ConstraintLayout可以实现下图全部。<br><img src="http://upload-images.jianshu.io/upload_images/2237943-0a0a5e059b072d8b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图1"><br>想实现类似LL（LinearLayout）的weight的效果，重点看每个TextView的最下三行以及每个TextView的<strong>layout_width都是0</strong>，以下布局可以实现三个TextView。<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">TextView</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:id</span>=<span class="string">"@+id/tab1"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:layout_width</span>=<span class="string">"0dp"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:layout_height</span>=<span class="string">"30dp"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">app:layout_constraintBottom_toBottomOf</span>=<span class="string">"parent"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">app:layout_constraintLeft_toLeftOf</span>=<span class="string">"parent"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">app:layout_constraintRight_toLeftOf</span>=<span class="string">"@+id/tab2"</span> /&gt;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">TextView</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:id</span>=<span class="string">"@+id/tab2"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:layout_width</span>=<span class="string">"0dp"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:layout_height</span>=<span class="string">"30dp"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">app:layout_constraintBottom_toBottomOf</span>=<span class="string">"parent"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">app:layout_constraintLeft_toRightOf</span>=<span class="string">"@id/tab1"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">app:layout_constraintRight_toLeftOf</span>=<span class="string">"@+id/tab3"</span> /&gt;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">TextView</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:id</span>=<span class="string">"@+id/tab3"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:layout_width</span>=<span class="string">"0dp"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:layout_height</span>=<span class="string">"30dp"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">app:layout_constraintBottom_toBottomOf</span>=<span class="string">"parent"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">app:layout_constraintLeft_toRightOf</span>=<span class="string">"@id/tab2"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">app:layout_constraintRight_toRightOf</span>=<span class="string">"parent"</span> /&gt;</span></span><br></pre></td></tr></table></figure></p>
 <p>如果想实现2：1：1等分的效果，就如[图1]的第四行，需要给<strong>每个</strong>TextView<strong>分别</strong>添加如下属性，并<strong>挨个</strong>设置值为2，1，1即可：<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">app:layout_constraintHorizontal_weight</span><br></pre></td></tr></table></figure></p>
-<h4 id="part3：以下是LinearLayout和RelativeLayout都做不到的，或者说是-要花很大的代价才能实现-。"><a href="#part3：以下是LinearLayout和RelativeLayout都做不到的，或者说是-要花很大的代价才能实现-。" class="headerlink" title="part3：以下是LinearLayout和RelativeLayout都做不到的，或者说是[要花很大的代价才能实现]。"></a>part3：以下是LinearLayout和RelativeLayout都做不到的，或者说是[要花很大的代价才能实现]。</h4><ul>
+<h5 id="part3：以下是LinearLayout和RelativeLayout都做不到的，或者说是-要花很大的代价才能实现-。"><a href="#part3：以下是LinearLayout和RelativeLayout都做不到的，或者说是-要花很大的代价才能实现-。" class="headerlink" title="part3：以下是LinearLayout和RelativeLayout都做不到的，或者说是[要花很大的代价才能实现]。"></a>part3：以下是LinearLayout和RelativeLayout都做不到的，或者说是[要花很大的代价才能实现]。</h5><ul>
 <li>1、先说一下【链（Chains）】的概念：  </li>
 </ul>
 <p>ConstraintLayout中的控件想要定位准确，A控件是要依赖于父容器左侧和B，然后B控件依赖于A和B，C依赖于B以及父容器的右侧，就如图2所示：</p>
@@ -418,14 +447,12 @@
 </ul>
 <p>以前如果想要实现一个Banner宽高比是2:1这样的，很麻烦，因为每个机型分辨率有大有小，除非代码运行才能知道屏幕宽度是多少，才能动态得到屏幕宽度，在xml中根本无法实现。<br>但ConstraintLayout提供了一个属性就能实现：<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">app:layout_constraintDimensionRatio="W,2:1"</span><br><span class="line">或</span><br><span class="line">app:layout_constraintDimensionRatio="H,1:2"</span><br></pre></td></tr></table></figure></p>
 <p>注意：<strong>宽高需要设置0dp才能有效果！</strong></p>
-<h4 id="part4：关于Guideline（辅助线）"><a href="#part4：关于Guideline（辅助线）" class="headerlink" title="part4：关于Guideline（辅助线）"></a>part4：关于Guideline（辅助线）</h4><p>这个是为了方便ConstraintLayout布局，如果用过CAD的朋友就应该知道辅助线，用来辅助画图很方便，而且保存文件的时候该线是不会显示到图片上的，同理，这个也只是在写xml的时候辅助用的，应用真正运行的时候是看不到的。</p>
+<h5 id="part4：关于Guideline（辅助线）"><a href="#part4：关于Guideline（辅助线）" class="headerlink" title="part4：关于Guideline（辅助线）"></a>part4：关于Guideline（辅助线）</h5><p>这个是为了方便ConstraintLayout布局，如果用过CAD的朋友就应该知道辅助线，用来辅助画图很方便，而且保存文件的时候该线是不会显示到图片上的，同理，这个也只是在写xml的时候辅助用的，应用真正运行的时候是看不到的。</p>
 <p>因为是一条线嘛，自然要区分水平还是垂直的，所以就有一个属性：<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">android:orientation</span><br></pre></td></tr></table></figure></p>
 <p>取值为”vertical”和”horizontal”，跟RecyclerView一样。</p>
 <p>它还有一些属性用来给辅助线找准位置，然后给辅助线命名个id，其他控件只要基于该先找到自己的位置就好啦~<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">layout_constraintGuide_begin  </span><br><span class="line">layout_constraintGuide_end</span><br><span class="line">layout_constraintGuide_percent</span><br></pre></td></tr></table></figure></p>
 <p>它有两种方式来找到自己的位置，一个是绝对值，也就是begin&amp;end（取值为dp），一个是百分比percent（取值为0~1）。<br>当orientation为vertical的时候，begin对应距离顶部，end对应距离底部。<br>当orientation为horizontal的时候，begin对应距离左边，end对应距离右边。</p>
-<p>真正使用的时候，就把Guideline当作一个View来用好了，Android Studio也会有预览给你看的，记得要给它命名啊，不然其他控件怎么基于它定位呢，对吧？</p>
-<hr>
-<h3 id="更多请参阅："><a href="#更多请参阅：" class="headerlink" title="更多请参阅："></a>更多请参阅：</h3><p><a href="http://blog.csdn.net/lmj623565791/article/details/78011599" target="_blank" rel="noopener">1、鸿洋：ConstraintLayout 完全解析 快来优化你的布局吧</a><br><a href="http://blog.csdn.net/guolin_blog/article/details/53122387" target="_blank" rel="noopener">2、郭霖：Android新特性介绍，ConstraintLayout完全解析</a><br><a href="https://developer.android.google.cn/reference/android/support/constraint/ConstraintLayout.html#VirtualHelpers" target="_blank" rel="noopener">3、Google官方文档——ConstraintLayout</a><br><a href="https://developer.android.google.cn/reference/android/support/constraint/Guideline.html#" target="_blank" rel="noopener">4、Google官方文档——Guideline</a><br><a href="https://mp.weixin.qq.com/s/gGR2itbY7hh9fo61SxaMQQ" target="_blank" rel="noopener">5、解析ConstraintLayout的性能优势</a>  </p>
+<p>真正使用的时候，就把Guideline当作一个View来用好了，Android Studio也会有预览给你看的。</p>
 
       
     </div>
@@ -496,7 +523,7 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2017/11/01/Android-widget-ConstraintLayout/" data-title="Android | Android控件之ConstraintLayout" data-url="https://github.com/liujia95/liujia95.github.io/2017/11/01/Android-widget-ConstraintLayout/">
+      <div class="ds-thread" data-thread-key="2017/11/01/Android-widget-ConstraintLayout/" data-title="Android | ConstraintLayout" data-url="https://github.com/liujia95/liujia95.github.io/2017/11/01/Android-widget-ConstraintLayout/">
       </div>
     
   </div>
@@ -551,15 +578,6 @@
           
 
           
-            
-            
-            <div class="site-state-item site-state-categories">
-              
-                <span class="site-state-item-count">2</span>
-                <span class="site-state-item-name">分类</span>
-              
-            </div>
-          
 
           
             
@@ -593,7 +611,7 @@
               <span class="links-of-author-item">
                 <a href="https://www.jianshu.com/u/d71d69546f9a" target="_blank" title="Jianshu">
                   
-                    <i class="fa fa-fw fa-https://www.jianshu.com/u/d71d69546f9a"></i>
+                    <i class="fa fa-fw fa-globe"></i>
                   
                     
                       Jianshu
@@ -625,7 +643,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#目录："><span class="nav-text">目录：</span></a></li></ol><li class="nav-item nav-level-2"><a class="nav-link" href="#1、为什么要用ConstraintLayout？"><span class="nav-text">1、为什么要用ConstraintLayout？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2、它有哪些缺点？"><span class="nav-text">2、它有哪些缺点？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3、怎么使用？"><span class="nav-text">3、怎么使用？</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1、引入资源"><span class="nav-text">1、引入资源</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2、熟悉它的属性，主要有几部分："><span class="nav-text">2、熟悉它的属性，主要有几部分：</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#part1-类似于RelativeLayout的部分："><span class="nav-text">part1:类似于RelativeLayout的部分：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#part2：类似LinearLayout的weight效果"><span class="nav-text">part2：类似LinearLayout的weight效果</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#part3：以下是LinearLayout和RelativeLayout都做不到的，或者说是-要花很大的代价才能实现-。"><span class="nav-text">part3：以下是LinearLayout和RelativeLayout都做不到的，或者说是[要花很大的代价才能实现]。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#part4：关于Guideline（辅助线）"><span class="nav-text">part4：关于Guideline（辅助线）</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#更多请参阅："><span class="nav-text">更多请参阅：</span></a></li></ol></li></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#目录："><span class="nav-text">目录：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1、为什么要用ConstraintLayout？"><span class="nav-text">1、为什么要用ConstraintLayout？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2、它有哪些缺点？"><span class="nav-text">2、它有哪些缺点？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3、怎么使用？"><span class="nav-text">3、怎么使用？</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1、引入资源"><span class="nav-text">1、引入资源</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2、熟悉它的属性，主要有几部分："><span class="nav-text">2、熟悉它的属性，主要有几部分：</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#part1-类似于RelativeLayout的部分："><span class="nav-text">part1:类似于RelativeLayout的部分：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#part2：类似LinearLayout的weight效果"><span class="nav-text">part2：类似LinearLayout的weight效果</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#part3：以下是LinearLayout和RelativeLayout都做不到的，或者说是-要花很大的代价才能实现-。"><span class="nav-text">part3：以下是LinearLayout和RelativeLayout都做不到的，或者说是[要花很大的代价才能实现]。</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#part4：关于Guideline（辅助线）"><span class="nav-text">part4：关于Guideline（辅助线）</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
@@ -647,7 +665,7 @@
       <div class="footer-inner">
         <div class="copyright">
   
-  &copy; 
+  &copy;  2017 - 
   <span itemprop="copyrightYear">2018</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
@@ -722,6 +740,8 @@
   
 
 
+  
+
 
 
 
@@ -749,6 +769,9 @@
 
   
   <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+  
+  <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
 
 
   
@@ -796,13 +819,6 @@
   </script>
 
   
-    
-    
-    <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
-    <script src="/js/src/hook-duoshuo.js"></script>
-  
-
-
 
 
 
@@ -816,12 +832,136 @@
 
 
   
+    <script type="text/javascript">
+    (function(){
+      var appid = 'cytV2PtnW';
+      var conf = '5529049057272b560255b999a1f0bbbc';
+      var width = window.innerWidth || document.documentElement.clientWidth;
+      if (width < 960) {
+      window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("https://changyan.sohu.com/upload/changyan.js",function(){
+        window.changyan.api.config({appid:appid,conf:conf})});
+      }
+    })();
+    </script>
+    <script type="text/javascript" src="https://assets.changyan.sohu.com/upload/plugins/plugins.count.js"></script>
+  
+
+
+
+  
 
 
 
 
 
   
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("0jfMa8pkn4Xg9KX5wjrGAAnv-gzGzoHsz", "yNpRDInyoeeUKqw2zHnlSHUV");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
 
   
 

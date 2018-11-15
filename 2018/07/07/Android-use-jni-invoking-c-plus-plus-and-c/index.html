@@ -99,12 +99,12 @@
 <meta property="og:type" content="article">
 <meta property="og:title" content="Android | jni调用c++&#x2F;c详解">
 <meta property="og:url" content="https://github.com/liujia95/liujia95.github.io/2018/07/07/Android-use-jni-invoking-c-plus-plus-and-c/index.html">
-<meta property="og:site_name" content="一人静">
+<meta property="og:site_name" content="LiuJia&#39;s Blog">
 <meta property="og:description" content="目录：1、下载ndk2、编写jni的加载类3、使用javah -jni生成.h文件">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/2237943-d815ac3491195bcf.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/2237943-22cf36c7a0e5ebf3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2018-11-15T07:28:10.876Z">
+<meta property="og:updated_time" content="2018-11-15T08:24:00.834Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Android | jni调用c++&#x2F;c详解">
 <meta name="twitter:description" content="目录：1、下载ndk2、编写jni的加载类3、使用javah -jni生成.h文件">
@@ -143,7 +143,7 @@
 
 
 
-  <title>Android | jni调用c++/c详解 | 一人静</title>
+  <title>Android | jni调用c++/c详解 | LiuJia's Blog</title>
   
 
 
@@ -189,7 +189,7 @@
     <div class="custom-logo-site-title">
       <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">一人静</span>
+        <span class="site-title">LiuJia's Blog</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -263,6 +263,24 @@
 
 
 
+
+
+<script>
+
+    window.onload = function(){
+        var path = 'https://liujia95me.coding.me'; //这里要改成你博客的地址
+        var localhostItem = String(window.location).split(path)[1];
+        var LiNode = document.querySelectorAll('#menu > li > a')
+
+        for(var i = 0; i< LiNode.length;i++){
+            var item = String(LiNode[i].href).split(path)[1];
+            if(item == localhostItem && item != undefined){
+                LiNode[i].setAttribute('style','border-bottom:1px solid black');
+            }
+        }
+    };
+
+</script>
  </div>
     </header>
 
@@ -295,7 +313,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="一人静">
+      <meta itemprop="name" content="LiuJia's Blog">
     </span>
 
     
@@ -342,6 +360,17 @@
           
 
           
+          
+             <span id="/2018/07/07/Android-use-jni-invoking-c-plus-plus-and-c/" class="leancloud_visitors" data-flag-title="Android | jni调用c++/c详解">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
           
 
           
@@ -421,8 +450,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/11/01/Android-widget-ConstraintLayout/" rel="next" title="Android | Android控件之ConstraintLayout">
-                <i class="fa fa-chevron-left"></i> Android | Android控件之ConstraintLayout
+              <a href="/2017/11/01/Android-widget-ConstraintLayout/" rel="next" title="Android | ConstraintLayout">
+                <i class="fa fa-chevron-left"></i> Android | ConstraintLayout
               </a>
             
           </div>
@@ -514,15 +543,6 @@
           
 
           
-            
-            
-            <div class="site-state-item site-state-categories">
-              
-                <span class="site-state-item-count">2</span>
-                <span class="site-state-item-name">分类</span>
-              
-            </div>
-          
 
           
             
@@ -556,7 +576,7 @@
               <span class="links-of-author-item">
                 <a href="https://www.jianshu.com/u/d71d69546f9a" target="_blank" title="Jianshu">
                   
-                    <i class="fa fa-fw fa-https://www.jianshu.com/u/d71d69546f9a"></i>
+                    <i class="fa fa-fw fa-globe"></i>
                   
                     
                       Jianshu
@@ -610,7 +630,7 @@
       <div class="footer-inner">
         <div class="copyright">
   
-  &copy; 
+  &copy;  2017 - 
   <span itemprop="copyrightYear">2018</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
@@ -685,6 +705,8 @@
   
 
 
+  
+
 
 
 
@@ -712,6 +734,9 @@
 
   
   <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+  
+  <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
 
 
   
@@ -759,13 +784,6 @@
   </script>
 
   
-    
-    
-    <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
-    <script src="/js/src/hook-duoshuo.js"></script>
-  
-
-
 
 
 
@@ -779,12 +797,136 @@
 
 
   
+    <script type="text/javascript">
+    (function(){
+      var appid = 'cytV2PtnW';
+      var conf = '5529049057272b560255b999a1f0bbbc';
+      var width = window.innerWidth || document.documentElement.clientWidth;
+      if (width < 960) {
+      window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("https://changyan.sohu.com/upload/changyan.js",function(){
+        window.changyan.api.config({appid:appid,conf:conf})});
+      }
+    })();
+    </script>
+    <script type="text/javascript" src="https://assets.changyan.sohu.com/upload/plugins/plugins.count.js"></script>
+  
+
+
+
+  
 
 
 
 
 
   
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("0jfMa8pkn4Xg9KX5wjrGAAnv-gzGzoHsz", "yNpRDInyoeeUKqw2zHnlSHUV");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
 
   
 
